@@ -40,7 +40,7 @@ print("RioWeb Request Complete, Excel File in Progess...")
 
 export_list = [["Game ID", "Event Number", "Batter Username", "Batter Name", "Batter, Colors Combined", "Batting Hand", "Batter Horizontal Traj", "Batter Veritcal Traj", "Type of Swing", "Relevant Batting Power", "Type of Contact", "Frame of Contact", "Stick Input", "Stick Frame Aligment", "Charge Power Up", "Charge Power Down", "Chem Links",
                 "Ball Angle", "x_velo (mph)", "y_velo (mph)", "z_velo (mph)", "Exit Velocity (mph)", "Launch Angle", "Max Height (m)", "Fielder Character Name", "Fielder Jump", "Fielder Position", "Fielding Hand", "Fielder X Pos (m)", "Fielder Y Pos (m)", "Fielder Z Pos (m)",  "Manual Select State",
-                "Final Result", "Simplified Result", "ball_x_pos (m)", "ball_y_pos (m)", "ball_z_pos (m)", "Pitcher Username", "Pitcher Character Name", "Pitcher Cursed Ball"]]
+                "Final Result", "Simplified Result", "ball_x_pos (m)", "ball_y_pos (m)", "ball_z_pos (m)", "Distance from fielder starting location to ball landing location", "Pitcher Username", "Pitcher Character Name", "Pitcher Cursed Ball"]]
 
 for event in jsonObj["Data"]:
     export_list.append([
@@ -81,6 +81,7 @@ for event in jsonObj["Data"]:
                         event["ball_x_pos"],
                         event["ball_y_pos"],
                         event["ball_z_pos"],
+                        MattGreeRioWebExtensions.distance_to_starting_coordinates(event["fielder_position"], event["ball_x_pos"], event["ball_z_pos"]),
                         event["pitcher_username"],
                         RioStatsConverter.char_id(event["pitcher_char_id"]),
                         MattGreeRioWebExtensions.stat_lookup(event["pitcher_char_id"],"0x2")

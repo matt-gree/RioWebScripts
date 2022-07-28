@@ -149,7 +149,7 @@ def simplified_character(val):
         return "Bad ID: " + str(val)
 
 def launch_angle(x_velo, y_velo, z_velo):
-    return np.degrees(np.tan((y_velo)/(np.sqrt(x_velo**2 + z_velo**2))))
+    return np.degrees(np.arctan2((y_velo), (np.sqrt(x_velo**2 + z_velo**2))))
 
 def velo_to_mph(velo):
     return velo*60*2.24
