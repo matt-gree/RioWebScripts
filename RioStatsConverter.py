@@ -62,7 +62,7 @@ def char_id(val):
         52: "Dry Bones(R)",
         53: "Bro(F)"
     }
-    return_and_error_message(val, char_name_dict)
+    return return_and_error_message(val, char_name_dict)
 
 
 def stadium_id(val):
@@ -75,7 +75,7 @@ def stadium_id(val):
         5: "DK's Jungle",
         6: "Toy Field"
     }
-    return_and_error_message(val, stadium_id_dict)
+    return return_and_error_message(val, stadium_id_dict)
 
 
 def contact_id(val):
@@ -87,7 +87,7 @@ def contact_id(val):
         3: "Nice - Right",
         4: "Sour - Right"
     }
-    return_and_error_message(val, contact_id_dict)
+    return return_and_error_message(val, contact_id_dict)
 
 
 def hand_id(val):
@@ -95,7 +95,7 @@ def hand_id(val):
         0: "Right",
         1: "Left"
     }
-    return_and_error_message(val, hand_id_dict)
+    return return_and_error_message(val, hand_id_dict)
 
 
 def hand_bool(true_or_false):
@@ -103,7 +103,7 @@ def hand_bool(true_or_false):
         True: "Right",
         False: "Left"
     }
-    return_and_error_message(true_or_false, hand_bool_dict)
+    return return_and_error_message(true_or_false, hand_bool_dict)
 
 
 def input_direction_id(val):
@@ -112,7 +112,7 @@ def input_direction_id(val):
         1: "Towards Batter",
         2: "Away From Batter"
     }
-    return_and_error_message(val, input_direction_dict)
+    return return_and_error_message(val, input_direction_dict)
 
 
 def pitch_type_id(val):
@@ -121,7 +121,7 @@ def pitch_type_id(val):
         1: "Charge",
         2: "ChangeUp"
     }
-    return_and_error_message(val, pitch_type_dict)
+    return return_and_error_message(val, pitch_type_dict)
 
 
 def charge_pitch_id(val):
@@ -130,7 +130,7 @@ def charge_pitch_id(val):
         2: "Slider",
         3: "Perfect"
     }
-    return_and_error_message(val, charge_type_dict)
+    return return_and_error_message(val, charge_type_dict)
 
 
 def type_of_swing_id(val):
@@ -141,7 +141,7 @@ def type_of_swing_id(val):
         3: "Star",
         4: "Bunt"
     }
-    return_and_error_message(val, type_of_swing_dict)
+    return return_and_error_message(val, type_of_swing_dict)
 
 
 def position_id(val):
@@ -157,7 +157,7 @@ def position_id(val):
         8: "RF",
         255: "Inv"
     }
-    return_and_error_message(val, position_id_dict)
+    return return_and_error_message(val, position_id_dict)
 
 
 def fielder_actions_id(val):
@@ -166,7 +166,7 @@ def fielder_actions_id(val):
         2: "Sliding",
         3: "Walljump",
     }
-    return_and_error_message(val, fielder_actions_dict)
+    return return_and_error_message(val, fielder_actions_dict)
 
 
 def fielder_bobbles_id(val):
@@ -179,7 +179,7 @@ def fielder_bobbles_id(val):
         16: "Garlic knockout",
         255: "None"
     }
-    return_and_error_message(val, fielder_bobbles_dict)
+    return return_and_error_message(val, fielder_bobbles_dict)
 
 
 def steal_type_id(val):
@@ -190,7 +190,7 @@ def steal_type_id(val):
         3: "Perfect",
         55: "None"
     }
-    return_and_error_message(val, steal_type_dict)
+    return return_and_error_message(val, steal_type_dict)
 
 
 def out_type_id(val):
@@ -202,7 +202,7 @@ def out_type_id(val):
         4: "Force Back",
         16: "Strike-out",
     }
-    return_and_error_message(val, out_type_dict)
+    return return_and_error_message(val, out_type_dict)
 
 
 def pitch_result_id(val):
@@ -216,7 +216,7 @@ def pitch_result_id(val):
         6: "Contact",
         7: "Unknown"
     }
-    return_and_error_message(val, pitch_result_dict)
+    return return_and_error_message(val, pitch_result_dict)
 
 
 def primary_contact_result_id(val):
@@ -227,7 +227,7 @@ def primary_contact_result_id(val):
         3: "Fielded",
         4: "Unknown"
     }
-    return_and_error_message(val, primary_contact_result_dict)
+    return return_and_error_message(val, primary_contact_result_dict)
 
 
 def secondary_contact_result_id(val):
@@ -247,7 +247,7 @@ def secondary_contact_result_id(val):
         15: "Ground Ball Double Play",
         16: "Foul catch",
     }
-    return_and_error_message(val, secondary_contact_result_dict)
+    return return_and_error_message(val, secondary_contact_result_dict)
 
 
 def final_result_id(val):
@@ -270,7 +270,7 @@ def final_result_id(val):
         15: "Ground Ball Double Play",
         16: "Foul Catch"
     }
-    return_and_error_message(val, final_result_id_dict)
+    return return_and_error_message(val, final_result_id_dict)
 
 
 def pitch_result(val):
@@ -284,7 +284,7 @@ def pitch_result(val):
         6: "Contact",
         7: "Unknown"
     }
-    return_and_error_message(val, pitch_result_id_dict)
+    return return_and_error_message(val, pitch_result_id_dict)
 
 
 def manual_select_id(val):
@@ -293,4 +293,4 @@ def manual_select_id(val):
         1: "Selected Other Char",
         2: "Selected This Char",
     }
-    return_and_error_message(val, manual_select_dict)
+    return return_and_error_message(val, manual_select_dict)

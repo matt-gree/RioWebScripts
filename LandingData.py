@@ -36,7 +36,8 @@ wb.save(filepath)
 r = requests.get(url)
 jsonObj = r.json()
 
-print("RioWeb Request Complete, Excel File in Progess...")
+print("RioWeb Request Complete, Excel File in Progess")
+print("This will take a few minutes...")
 
 export_list = [["Game ID", "Event Number", "Batter Username", "Batter Name", "Batter, Colors Combined", "Batting Hand", "Batter Horizontal Traj", "Batter Veritcal Traj", "Type of Swing", "Relevant Batting Power", "Type of Contact", "Frame of Contact", "Stick Input", "Stick Frame Aligment", "Charge Power Up", "Charge Power Down", "Chem Links",
                 "Ball Angle", "x_velo (mph)", "y_velo (mph)", "z_velo (mph)", "Exit Velocity (mph)", "Launch Angle", "Max Height (m)", "Fielder Character Name", "Fielder Jump", "Fielder Position", "Fielding Hand", "Fielder X Pos (m)", "Fielder Y Pos (m)", "Fielder Z Pos (m)",  "Manual Select State",
