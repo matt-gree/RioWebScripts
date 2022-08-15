@@ -92,25 +92,31 @@ def contact_id(val):
 
 def hand_id(val):
     hand_id_dict = {
-        0: "Right",
-        1: "Left"
+        0: "Left",
+        1: "Right"
     }
     return return_and_error_message(val, hand_id_dict)
 
 
-def hand_bool(true_or_false):
+def hand_bool(bool):
     hand_bool_dict = {
-        True: "Right",
-        False: "Left"
+        True: "Left",
+        False: "Right"
     }
-    return return_and_error_message(true_or_false, hand_bool_dict)
+    return return_and_error_message(bool, hand_bool_dict)
 
 
 def input_direction_id(val):
     input_direction_dict = {
         0: "None",
-        1: "Towards Batter",
-        2: "Away From Batter"
+        1: "Left",
+        2: "Right",
+        4: "Down",
+        5: "Down and Left",
+        6: "Down and Right",
+        8: "Up",
+        9: "Up and Left",
+        10: "Up and Right"
     }
     return return_and_error_message(val, input_direction_dict)
 
@@ -155,7 +161,8 @@ def position_id(val):
         6: "LF",
         7: "CF",
         8: "RF",
-        255: "Inv"
+        255: "Inv",
+        None: "None"
     }
     return return_and_error_message(val, position_id_dict)
 
@@ -292,5 +299,6 @@ def manual_select_id(val):
         0: "No Selected Char",
         1: "Selected Other Char",
         2: "Selected This Char",
+        None: "None"
     }
     return return_and_error_message(val, manual_select_dict)

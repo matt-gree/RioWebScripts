@@ -1,5 +1,6 @@
 import numpy as np
 import csv
+import os
 
 def simplifed_result(val, x_pos, z_pos):
     final_result_id_dict = {
@@ -159,7 +160,8 @@ def exit_velo(x_velo, y_velo, z_velo):
 
 def stat_lookup(char_id, stat_name):
     stat_obj = []
-    with open("CharStats.csv", "r") as file:
+    stat_csv = str(os.path.dirname(__file__)) + str("/CharStats.csv")
+    with open(stat_csv, "r") as file:
         reader = csv.reader(file)
         for row in reader:
             stat_obj.append(row)
@@ -179,3 +181,21 @@ def traj(char_id, horiz0_or_vert1):
     string = string.split("/")
     return string[horiz0_or_vert1]
 
+def distance_to_starting_coordinates(pos_str, x_coor, z_coor):
+    fielder_starting_coordinates_dict = {
+        0: [0, 18.4],
+        1: [0, -3.8],
+        2: [18.5, 22],
+        3: [11, 36],
+        4: [-18.5, 22],
+        5: [-11, 36],
+        6: [-34, 60],
+        7: [0, 76],
+        8: [34, 60]
+    }
+    if pos_str in fielder_starting_coordinates_dict.keys():
+        distance = np.sqrt((x_coor - fielder_starting_coordinates_dict[pos_str][0])**2
+                             + (z_coor - fielder_starting_coordinates_dict[pos_str][1])**2)
+        return distance
+    else:
+        return "Bad ID: " + str(pos_str)
