@@ -57,10 +57,10 @@ def char_id(val):
         47: "Shy Guy(Bk)",
         48: "Dry Bones(Gy)",
         49: "Dry Bones(G)",
-        50: "Dry Bones(B)",
-        51: "Bro(B)",
-        52: "Dry Bones(R)",
-        53: "Bro(F)"
+        50: "Dry Bones(R)",
+        51: "Dry Bones(B)",
+        52: "Bro(F)",
+        53: "Bro(B)",
     }
     return return_and_error_message(val, char_name_dict)
 
